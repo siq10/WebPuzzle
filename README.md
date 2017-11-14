@@ -8,4 +8,4 @@ CLIW 3 Peopl!
 
 -> git commit -m "blahblah"
 
--> git push origin <branchname>
+-> git push origin !name of the creanga!
