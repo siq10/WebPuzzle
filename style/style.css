@@ -1,0 +1,18 @@
+body{
+    height: 100%;
+    margin: 0;
+
+}
+
+.bg {
+ 
+    background-image: url("../resources/cover.png");
+
+    /* Full height */
+   
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: 100% 120%;
+    
+}
