@@ -3,9 +3,58 @@ body{
     margin: 0;
 
 }
-
-.bg {
+.box{
+    display: block;
+    background:#BBB8AF;
+    border: none;
+    border-radius: 40px 10px;  
+    width: 200px;
+    height: 50px;
+    
  
+ }
+
+ .button-log { 
+    position: absolute;
+    left: 37%;
+    top: 42%;
+
+    background-image: url("../resources/login_button.png");
+    width: 314;
+    height: 56px;
+ }
+
+ .button-register { 
+    position: absolute;
+    left: 37%;
+    top: 53%;
+
+    background-image: url("../resources/register_button.png");
+    width: 314;
+    height: 56px;
+ }
+
+ .button-howto { 
+    position: absolute;
+    left: 37%;
+    top: 63%;
+
+    background-image: url("../resources/h.png");
+    width: 314;
+    height: 56px;
+ }
+ .button-top { 
+    position: absolute;
+    left: 37%;
+    top: 74%;
+    background-image: url("../resources/top_button.png");
+    width: 314;
+    height: 56px;
+ }
+ 
+ 
+.bg {
+
     background-image: url("../resources/cover.png");
 
     /* Full height */
@@ -16,3 +65,5 @@ body{
     background-size: 100% 120%;
     
 }
+
+  
