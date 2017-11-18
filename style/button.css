@@ -5,25 +5,25 @@
 
 .btn {
     position: relative;
-    width: 500px;
-    height: 60px;
     background-color: #BBB8af;
     border:none;
     border-radius: 9%; 
-    font-size: 40;
+    font-size: 40px;
     font-family: MonsterFont;
     text-align: center;
+    width: 500px;
+    height: 60px;
 }
 
 .btn:after {
     position: absolute;
-    top: 92.7%;
+    top: 94.7%;
     left: 50%;
     margin-left: -50%;
     content: '';
     width: 0;
     height: 0;
-    border-top: solid 20px #aba8a0;
+    border-top: solid 17px #aba8a0;
     border-left: solid 250px transparent;
     border-right: solid 250px transparent;
 }
