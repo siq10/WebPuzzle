@@ -11,6 +11,7 @@
     font-size: 40px;
     font-family: MonsterFont;
     text-align: center;
+    display:inline-block;
     width: 500px;
     height: 60px;
 }
@@ -23,7 +24,7 @@
     content: '';
     width: 0;
     height: 0;
-    border-top: solid 17px #aba8a0;
+    border-top: solid 11px #aba8a0;
     border-left: solid 250px transparent;
     border-right: solid 250px transparent;
-}
+}   

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: MonsterFont;
+    src: url("../resources/HVD_Rowdy.ttf");
+}
+.container{
+    position:relative;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+}
+.juan{
+    text-align: center;
+}
+.roby{
+    text-align: center;    
+}
+.space{
+    height:100;
+}
+.floater{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    justify-content: space-around;
+}
