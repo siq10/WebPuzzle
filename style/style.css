@@ -51,14 +51,49 @@ body{
     width: 314;
     height: 56px;
  }
+
+ .monster-robi{
+    position: absolute;
+    left: 17%;
+    top: 40%;
+    background-image: url("../resources/robi_monster.png");
+    width: 204;
+    height: 436px;
+
+ }
+
+ .monster-juan{
+    position: absolute;
+    left: 64%;
+    top: 39%;
+    background-image: url("../resources/Juan_monster.png");
+    width: 196;
+    height: 336px;
+
+ }
+ .logo { 
+    position: absolute;
+    left: 36%;
+    top: 10%;
+    background-image: url("../resources/logo_monster.png");
+    width: 334px;
+    height: 188px;
+ }
+
+ .shevron {
+    border: none;
+    border-radius: 40px 10px;
+    width: 51;
+    height: 56px;
+ }
  
  
 .bg {
 
-    background-image: url("../resources/cover.png");
+    /*background-image: url("../resources/cover.png");
 
     /* Full height */
-   
+    background-color: #212120;
 
     /* Center and scale the image nicely */
     background-position: center;
