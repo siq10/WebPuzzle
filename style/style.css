@@ -54,9 +54,11 @@ body{
 
  .monster-robi{
     position: absolute;
-    left: 20%;
-    top: 40%;
+    left: 18%;
+    top: 43%;
     background-image: url("../resources/robi_monster.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 204;
     height: 436px;
 
@@ -64,11 +66,13 @@ body{
 
  .monster-juan{
     position: absolute;
-    left: 67%;
-    top: 39%;
+    left: 75%;
+    top: 40%;
     background-image: url("../resources/Juan_monster.png");
-    width: 196;
-    height: 336px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 204;
+    height: 436px;
 
  }
  .logo { 

@@ -6,6 +6,11 @@ body{
     
 }
 
+h1, h2, h3, h4, h5, h6{
+    margin-top:2px;
+    margin-bottom:0;
+  }
+
 @font-face {
     font-family: MonsterFont;
     src: url("../resources/HVD_Rowdy.ttf");
@@ -13,7 +18,61 @@ body{
 
 h1 {
     font-family: MonsterFont;
-    font-size: 60pt;
+    font-size: 50pt;
     color: white;
     text-align: center;
+   
+}
+
+form{
+    margin-top:50px;
+}
+
+input[type=text], select {
+    
+    width: 80%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 3px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    border-radius: 5px;
+    background-image: url("../resources/login_form.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 60px;
+    width:20%;
+    height: 60%;
+}
+
+label{
+    
+    font-family: MonsterFont; 
+    font-size: 20px;
+    text-align: left;
+    color: white;
+}
+
+.title{
+    margin-top: 50px;
 }
