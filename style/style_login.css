@@ -1,0 +1,19 @@
+body{
+    height: 100%;
+    margin: 0;
+
+    background-color: #212120;
+    
+}
+
+@font-face {
+    font-family: MonsterFont;
+    src: url("../resources/HVD_Rowdy.ttf");
+}
+
+h1 {
+    font-family: MonsterFont;
+    font-size: 60pt;
+    color: white;
+    text-align: center;
+}
