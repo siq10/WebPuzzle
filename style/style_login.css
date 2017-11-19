@@ -25,6 +25,12 @@ h1, h2, h3, h4, h5, h6{
        
     }
 
+    .kid{
+        display: none;
+    }
+    .woman {
+        display: none;
+    }
     
     .robi-img {
         display: none;
@@ -173,6 +179,14 @@ input[type=submit]:hover {
     position: fixed;
     top: 60%;
     left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.woman{
+    width: 50%;
+    position: fixed;
+    top: 60%;
+    left: 95%;
     transform: translate(-50%, -50%);
 }
 
