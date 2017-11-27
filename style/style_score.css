@@ -41,6 +41,11 @@ body{
     background-color: #212120;
 }
 
+
+a:link {
+	color: 9FA1A3;;
+}
+
 table {
 	width:90%;
 	margin: 1 auto;
@@ -49,8 +54,8 @@ table {
 }
 
 th {
-   /* background-color: #404040;*/
-   background: linear-gradient(#262626 0%,#121212 100%);
+    /* background-color: #404040;*/
+    background: linear-gradient(#262626 0%,#121212 100%);
 	color: #9FA1A3; 
 	font-weight: bold;
 	height: 40px;
@@ -61,6 +66,11 @@ th, td {
     padding: 15px;
     text-align: center;
 }
+
+td {
+	color: white;
+}
+
 tr:nth-child(odd) {background-color: #121212;}
 
 tr:nth-child(even) {background-color: #262626;}
@@ -73,11 +83,19 @@ tr:first-child th:last-child {
   border-radius: 0 25px 0 0; 
 }
 
-tr:last-child td:last-child { 
+tr:last-child td:last-child  { 
   border-radius:  0 0 25px 0; 
 }
 
 tr:last-child td:first-child { 
+  border-radius: 0 0 0 25px;
+}
+
+tr:nth-child(10n) td:last-child  { 
+  border-radius:  0 0 25px 0; 
+}
+
+tr:nth-child(10n) td:first-child { 
   border-radius: 0 0 0 25px;
 }
 
@@ -103,6 +121,7 @@ tr:last-child td:first-child {
 }
 
 .middle-column {
+	margin-top: 2%;
 	position: relative;
     width: 40%;
     height: 100%;
@@ -118,4 +137,9 @@ tr:last-child td:first-child {
   float: right;
   /*background-color: yellow;*/
   border-collapse: collapse;
+}
+
+.paging-nav {
+    display: flex;
+    justify-content: space-evenly;
 }
