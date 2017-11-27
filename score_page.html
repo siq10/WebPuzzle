@@ -5,11 +5,14 @@
         <link rel="stylesheet" type="text/css" href="style/style_score.css">
 		<link rel="stylesheet" type="text/css" href="style/button.css">
         <style>
-        
         </style>
+		
+		<script>
+		</script>
     </head>
     
     <body class="bg" >
+	
 		<div class="container">
 		
 			<div class="top-div">
@@ -21,77 +24,144 @@
 			</div>
 			
 			<div class="middle-column">
-					<button>Top10</button>
-					<button>Find</button>
-					<table>
-						<thead>
-							<tr>
-								<th>Position</th>
-								<th>Name</th>
-								<th>Score</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Andrew</td>
-								<td>10000</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Robo</td>
-								<td>9000</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Crystal</td>
-								<td>8700</td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>Sky</td>
-								<td>8000</td>
-							</tr>
-							<tr>
-								<td>5</td>
-								<td>Slender</td>
-								<td>7000</td>
-							</tr>
-							<tr>
-								<td>6</td>
-								<td>Ananas</td>
-								<td>6009</td>
-							</tr>
-							<tr>
-								<td>7</td>
-								<td>TheRedMonkey</td>
-								<td>5000</td>
-							</tr>
-							<tr>
-								<td>8</td>
-								<td>Cristopher</td>
-								<td>4009</td>
-							</tr>
-							<tr>
-								<td>9</td>
-								<td>Leonard</td>
-								<td>3000</td>
-							</tr>
-							<tr>
-								<td>10</td>
-								<td>Xavier</td>
-								<td>2010</td>
-							</tr>
-						</tbody>
+					
+				<table id="tableData">
+					<thead>
+						<tr>
+							<th>Position</th>
+							<th>Name</th>
+							<th>Score</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Andrew</td>
+							<td>10000</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Robo</td>
+							<td>9000</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Crystal</td>
+							<td>8700</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Sky</td>
+							<td>8000</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Slender</td>
+							<td>7000</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Ananas</td>
+							<td>6009</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>TheRedMonkey</td>
+							<td>5000</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>Cristopher</td>
+							<td>4009</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>Leonard</td>
+							<td>3000</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>Xavier</td>
+							<td>2010</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td>Juan</td>
+							<td>2000</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>Skarner</td>
+							<td>1950</td>
+						</tr>
+						<tr>
+							<td>13</td>
+							<td>Ananasus</td>
+							<td>1940</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td>YaMom</td>
+							<td>1930</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>Never</td>
+							<td>1920</td>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td>Car</td>
+							<td>1910</td>
+						</tr>
+						<tr>
+							<td>17</td>
+							<td>Loo</td>
+							<td>1900</td>
+						</tr>
+						<tr>
+							<td>18</td>
+							<td>Seen</td>
+							<td>1800</td>
+						</tr>
+						<tr>
+							<td>19</td>
+							<td>Strq</td>
+							<td>1700</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td>Vlad</td>
+							<td>1600</td>
+						</tr>
+						<tr>
+							<td>21</td>
+							<td>Gtk</td>
+							<td>1500</td>
+						</tr>
+						<tr>
+							<td>22</td>
+							<td>Siq</td>
+							<td>0</td>
+						</tr>
 						
-					</table>
-					<a> Next >> </a>
+					</tbody>
+					
+				</table>
 			</div>
 			
 			<div class="right-column">
 				<div class="monster-juan"></div>
 			</div>
 		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="paging.js"></script> 
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#tableData').paging({limit:10});
+			});
+		</script>
 		
     </body>
 </html>
