@@ -67,6 +67,10 @@ th, td {
     text-align: center;
 }
 
+td {
+	color: white;
+}
+
 tr:nth-child(odd) {background-color: #121212;}
 
 tr:nth-child(even) {background-color: #262626;}
