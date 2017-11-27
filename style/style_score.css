@@ -138,3 +138,8 @@ tr:nth-child(10n) td:first-child {
   /*background-color: yellow;*/
   border-collapse: collapse;
 }
+
+.paging-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
