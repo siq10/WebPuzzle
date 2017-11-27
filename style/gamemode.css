@@ -1,0 +1,78 @@
+@font-face {
+    font-family: MonsterFont;
+    src: url("../resources/HVD_Rowdy.ttf");
+}
+
+.gamemenu {
+    display: flex;
+    justify-content: space-evenly;    
+}
+
+.logoleft{
+    width:600px;
+}
+.logoright{
+    width:600px;
+    order:3;
+}
+
+.title{
+    font-size: 50px;
+    text-align: center;
+    font-family:MonsterFont;
+    color:white;
+    font-weight: 100;
+}
+
+body{
+    background-color: #212120;
+}
+
+.logoleft hr{
+    width:20rem;
+    background:white;
+    height:0.4rem;
+    transform: scaleX(0);
+    transition: transform 1.2s ease;
+    position:absolute;
+    bottom:31.5rem;
+    left:22rem;
+}
+.logoleft:hover > hr {
+    transform: scaleX(1);
+
+}
+
+.logoright hr{
+    width:20rem;
+    background:white;
+    height:0.4rem;
+    transform: scaleX(0);
+    transition: transform 1.2s ease;
+    position:relative;
+    left:4.5rem;
+    bottom:26.5rem;
+}
+.logoright:hover > hr {
+    transform: scaleX(1);
+
+}
+
+.arrow {
+    order:2;
+    margin-top:8rem;
+    width: 200px;
+    height: 200px;
+    background: white center ;
+    clip-path: polygon(50% 5%, 5% 33%,30% 33%, 30% 95%, 70% 95%,70% 33%,95% 33%);
+    /*  background-size: cover;*/
+    transition: transform ease 1.5s;
+}
+.logoleft:hover ~ .arrow{
+    transform: translateX(-90px) rotate(-85deg) scale(1.2) skewX(-10deg) skewY(-10deg);
+}
+
+.logoright:hover ~ .arrow{
+    transform: translateX(90px) rotate(85deg) scale(1.2) skewX(10deg) skewY(10deg);
+}
+
