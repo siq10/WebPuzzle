@@ -1,3 +1,84 @@
 body{
     background: #212120;
 }
+@font-face {
+    font-family: MonsterFont;
+    src: url("../resources/HVD_Rowdy.ttf");
+}
+.title{
+    text-align: center;
+    color: #BBB8af;
+    font-family: MonsterFont;
+}
+.card{
+    width:40%;
+    margin:0 auto;
+    background: #BBB8af;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: center;
+}
+.f1{
+    width:33%;
+    text-align: right;
+}
+.f2{
+    width:33%;
+    text-align: left;
+}
+.f3{
+    width: 33%;
+}
+a{
+    border-radius:5%;
+    background:#212120;
+    font-size: 2rem;
+    padding:0.4rem 3rem;
+    text-decoration: none;
+    line-height: 4rem;
+    color:#BBB8af;
+}
+.grayzone{
+    color:lightslategrey;
+}
+.flex{
+    display: flex;
+    justify-content:space-around;
+    border-style: none;
+}
+
+hr {
+    width:.5px;
+    height:9rem;
+    border-color: #212120;
+}
+
+.overlay{
+    position:relative;
+    width:40%;
+    margin:0 auto;
+    background: #BBB8af;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: center;
+}
+.overlay:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+        border-radius: 5%;
+    top:0; 
+    left:0;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+}
+
+ .logo {   
+     text-align:center;
+     margin:2rem;
+}

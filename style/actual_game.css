@@ -1,3 +1,7 @@
+@font-face {
+    font-family: MonsterFont;
+    src: url("../resources/HVD_Rowdy.ttf");
+}
 .bg {
     background-color: #212120;
 }
@@ -27,14 +31,17 @@
 h1 {
     color: White;
     text-decoration: none;
+    
 }
 h2 {
 	color: SlateGray;
 }
 
+
 input[type=submit] {
 	background-color: DarkSlateGray;
     border: none;
+        font-family:MonsterFont;
     color: White;
     padding: 14px 80px;
     text-align: center;
