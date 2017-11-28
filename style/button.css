@@ -15,6 +15,22 @@
     width: 500px;
     height: 60px;
 }
+.btnscreen {
+    margin-top: 10px; 
+    position: relative;
+    background-color: #BBB8af;
+    border:none;
+    color: white;
+    border-radius: 9%; 
+    font-size: 30px;
+    font-family: MonsterFont;
+    text-align: center;
+    display:inline-block;
+    justify-content: center;
+    width: 400px;
+    height: 60px;
+
+}
 
 .btn:after {
     position: absolute;
