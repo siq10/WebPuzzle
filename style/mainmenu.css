@@ -23,3 +23,24 @@
     flex-wrap: nowrap; 
     justify-content: space-around;
 }
+
+@media only screen and (min-width: 835px){
+    .juan{
+        text-align: center;
+    }
+    .roby{
+        text-align: center;    
+    }
+}
+
+
+@media only screen and (max-width: 835px){
+    .juan {
+        display: none;
+    }
+    
+    .roby{
+        display: none;
+    }
+
+}
