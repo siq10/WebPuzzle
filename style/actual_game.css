@@ -30,16 +30,19 @@
 }
 
 h1 {
+	font-family: MonsterFont;
     color: White;
     text-decoration: none;
     
 }
 h2 {
+	font-family: MonsterFont;
 	color: SlateGray;
 }
 
 
 input[type=submit] {
+	font-family: MonsterFont;
 	background-color: DarkSlateGray;
     border: none;
         font-family:MonsterFont;

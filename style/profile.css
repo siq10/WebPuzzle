@@ -1,3 +1,8 @@
+@font-face {
+    font-family: MonsterFont;
+    src: url("../resources/HVD_Rowdy.ttf");
+}
+
 body{
     height: 100%;
     margin: 0;
@@ -69,6 +74,7 @@ a:link {
 }
 
 h1 {
+	font-family: MonsterFont;
     color: White;
     text-decoration: none;
 }
@@ -78,4 +84,8 @@ h1 {
 }
 .roby{
     text-align: left;    
+}
+.img{
+	 height: 532 px;
+	 width: 252 px;
 }
