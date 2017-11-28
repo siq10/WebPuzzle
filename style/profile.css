@@ -30,38 +30,34 @@ a:link {
 .container {
   width: 100%;
   height: 100%;
+  	display: flex;
+	justify-content: space-between;
+	text-align:center;
+		margin-top: 2rem;
+
 }
 
 .top-div {
   width: 100%;
   height: 200px;
-   border-collapse: collapse;
 }
 
-.left-column {
+.left-column {	
 	position: relative;
     width: 30%;
-    height: 100%;
-    float: left;
-    border-collapse: collapse;
 }
 
 .middle-column {
-	margin-top: 2%;
-	position: relative;
-    width: 40%;
-    height: 100%;
-    float: left;
-    border-collapse: collapse;
+	margin:0 auto;
+	text-align:center;
+    width:25%;
+   /* height: 10%; */
 }
 
 .right-column {
   width: 30%;
-  height: 100%;
-  position: relative;
-  float: right;
-  border-collapse: collapse;
-}
+  top:5%;
+  /*height: 10%; */}
 
 .help{
 	padding: 2%;
