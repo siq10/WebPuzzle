@@ -3,6 +3,10 @@
     src: url("../resources/HVD_Rowdy.ttf");
 }
 
+.welcome {
+    font-family: MonsterFont;
+}
+
 .btn {
     position: relative;
     background-color: #BBB8af;
