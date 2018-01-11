@@ -36,53 +36,55 @@ CREATE TABLE `USER_MAP` (
   `USER_ID` int(11) NOT NULL,
   `MAP_ID` int(11) NOT NULL,
   `SCORE` int(11) NOT NULL,
-  `TIME` time NOT NULL
+  `TIME` time NOT NULL,
+  `ATTEMPTS` int(11) NOT NULL,
+  `COMPLETED` bool NOT NULL
 );
 
-insert into USER_MAP values(0, 0, 1, 2000, "00:01:20");
-insert into USER_MAP values(1, 0, 2, 100, "00:01:20");
+insert into USER_MAP values(0, 0, 1, 2000, "00:01:20", 4, 1);
+insert into USER_MAP values(1, 0, 2, 100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(2, 1, 1, 0, "00:01:20");
-insert into USER_MAP values(3, 1, 2, 0, "00:01:20");
+insert into USER_MAP values(2, 1, 1, 0, "00:01:20", 0, 0);
+insert into USER_MAP values(3, 1, 2, 0, "00:01:20", 0, 0);
 
-insert into USER_MAP values(4, 2, 1, 0, "00:01:20");
-insert into USER_MAP values(5, 2, 2, 100, "00:01:20");
+insert into USER_MAP values(4, 2, 1, 0, "00:01:20", 0, 0);
+insert into USER_MAP values(5, 2, 2, 100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(6, 3, 1, 200, "00:01:20");
-insert into USER_MAP values(7, 3, 2, 100, "00:01:20");
+insert into USER_MAP values(6, 3, 1, 200, "00:01:20", 4, 1);
+insert into USER_MAP values(7, 3, 2, 100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(8, 4, 1, 0, "00:01:20");
-insert into USER_MAP values(9, 4, 2, 200, "00:01:20");
+insert into USER_MAP values(8, 4, 1, 0, "00:01:20", 3, 0);
+insert into USER_MAP values(9, 4, 2, 200, "00:01:20", 4, 1);
 
-insert into USER_MAP values(10, 5, 1, 20, "00:01:20");
-insert into USER_MAP values(11, 5, 2, 100, "00:01:20");
+insert into USER_MAP values(10, 5, 1, 20, "00:01:20", 4, 1);
+insert into USER_MAP values(11, 5, 2, 100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(12, 6, 1, 10, "00:01:20");
-insert into USER_MAP values(13, 6, 2, 100, "00:01:20");
+insert into USER_MAP values(12, 6, 1, 10, "00:01:20", 4, 1);
+insert into USER_MAP values(13, 6, 2, 100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(14, 7, 1, 20, "00:01:20");
-insert into USER_MAP values(15, 7, 2, 50, "00:01:20");
+insert into USER_MAP values(14, 7, 1, 20, "00:01:20", 4, 1);
+insert into USER_MAP values(15, 7, 2, 50, "00:01:20", 4, 1);
 
-insert into USER_MAP values(16, 8, 1, 2000, "00:01:20");
-insert into USER_MAP values(17, 8, 2, 1100, "00:01:20");
+insert into USER_MAP values(16, 8, 1, 2000, "00:01:20", 4, 1);
+insert into USER_MAP values(17, 8, 2, 1100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(18, 9, 1, 2000, "00:01:20");
-insert into USER_MAP values(19, 9, 2, 1000, "00:01:20");
+insert into USER_MAP values(18, 9, 1, 2000, "00:01:20", 4, 1);
+insert into USER_MAP values(19, 9, 2, 1000, "00:01:20", 4, 1);
 
-insert into USER_MAP values(20, 10, 1, 200, "00:01:20");
-insert into USER_MAP values(21, 10, 2, 100, "00:01:20");
+insert into USER_MAP values(20, 10, 1, 200, "00:01:20", 4, 1);
+insert into USER_MAP values(21, 10, 2, 100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(22, 11, 1, 0, "00:01:20");
-insert into USER_MAP values(23, 11, 2, 0, "00:01:20");
+insert into USER_MAP values(22, 11, 1, 0, "00:01:20", 0, 0);
+insert into USER_MAP values(23, 11, 2, 0, "00:01:20", 0, 0);
 
-insert into USER_MAP values(24, 12, 1, 0, "00:01:20");
-insert into USER_MAP values(25, 12, 2, 100, "00:01:20");
+insert into USER_MAP values(24, 12, 1, 0, "00:01:20", 0, 0);
+insert into USER_MAP values(25, 12, 2, 100, "00:01:20", 4, 1);
 
-insert into USER_MAP values(26, 13, 1, 0, "00:01:20");
-insert into USER_MAP values(27, 13, 2, 0, "00:01:20");
+insert into USER_MAP values(26, 13, 1, 0, "00:01:20", 0, 0);
+insert into USER_MAP values(27, 13, 2, 0, "00:01:20", 0, 0);
 
-insert into USER_MAP values(28, 14, 1, 0, "00:01:20");
-insert into USER_MAP values(29, 14, 2, 0, "00:01:20");
+insert into USER_MAP values(28, 14, 1, 0, "00:01:20", 0, 0);
+insert into USER_MAP values(29, 14, 2, 0, "00:01:20", 3, 0);
 
-insert into USER_MAP values(30, 15, 1, 0, "00:01:20");
-insert into USER_MAP values(31, 15, 2, 0, "00:01:20");
+insert into USER_MAP values(30, 15, 1, 0, "00:01:20", 0, 0);
+insert into USER_MAP values(31, 15, 2, 0, "00:01:20", 0, 0);
