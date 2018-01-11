@@ -1,0 +1,39 @@
+
+CREATE TABLE `USER` (
+  `ID` int(11) NOT NULL PRIMARY KEY,
+  `USERNAME` varchar(256) NOT NULL UNIQUE,
+  `PASSWORD` varchar(256) NOT NULL
+);
+
+insert into USER values(0, "User0", "User0password");
+insert into USER values(1, "User1", "User1password");
+insert into USER values(2, "User2", "User2password");
+
+CREATE TABLE `MAP` (
+  `ID` int(11) NOT NULL PRIMARY KEY,
+  `NAME` varchar(256) NOT NULL UNIQUE,
+  `DIFICULTY` varchar(256) NOT NULL
+);
+
+insert into MAP values(0, "MAP0", "EASY");
+insert into MAP values(1, "MAP1", "MEDIUM");
+
+CREATE TABLE `USER_MAP` (
+  `ID` int(11) NOT NULL PRIMARY KEY,
+  `USER_ID` int(11) NOT NULL,
+  `MAP_ID` int(11) NOT NULL,
+  `SCORE` int(11) NOT NULL UNIQUE,
+  `TIME` time NOT NULL
+);
+
+insert into USER_MAP values(0, 2, 1, 2000, "00:01:20");
+
+ALTER TABLE `USER_MAP`
+    ADD CONSTRAINT `USER_ID`
+    FOREIGN KEY (`USER_ID`)
+    REFERENCES `USER`(`ID`);
+	
+ALTER TABLE `USER_MAP`
+    ADD CONSTRAINT `MAP_ID`
+    FOREIGN KEY (`MAP_ID`)
+    REFERENCES `MAP`(`ID`);
