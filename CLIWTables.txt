@@ -25,11 +25,12 @@ insert into USER values(15, "User15", "password");
 CREATE TABLE `MAP` (
   `ID` int(11) NOT NULL PRIMARY KEY,
   `NAME` varchar(256) NOT NULL UNIQUE,
+  `TYPE` varchar(256) NOT NULL,
   `DIFICULTY` varchar(256) NOT NULL
 );
 
-insert into MAP values(0, "MAP0", "EASY");
-insert into MAP values(1, "MAP1", "MEDIUM");
+insert into MAP values(0, "MAP0", "SINGLEPLAYER","EASY");
+insert into MAP values(1, "MAP1", "SINGLEPLAYER","MEDIUM");
 
 CREATE TABLE `USER_MAP` (
   `ID` int(11) NOT NULL PRIMARY KEY,
@@ -38,7 +39,7 @@ CREATE TABLE `USER_MAP` (
   `SCORE` int(11) NOT NULL,
   `TIME` time NOT NULL,
   `ATTEMPTS` int(11) NOT NULL,
-  `COMPLETED` bool NOT NULL
+  `COMPLETED` boolean NOT NULL
 );
 
 insert into USER_MAP values(0, 0, 1, 2000, "00:01:20", 4, 1);

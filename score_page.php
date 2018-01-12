@@ -42,28 +42,22 @@
 						<?php
 							session_start();
 							$conn = mysqli_connect("localhost","root","","monster_party");
-							/*
-							set @rownum=0;
-							SELECT @rownum:=@rownum+1, user.username, REPLACE(sum(user_map.score),'',0) FROM user
-							JOIN user_map on user_map.user_id=user.id
-							ORDER BY REPLACE(sum(user_map.score),'',0) desc
-							*/
+							
 							if(isset($_POST['search'])){
 								$srcRez = $_POST['valueToSearch'];
 								$sql = "SELECT user.username,sum(user_map.score) FROM user
-										JOIN user_map ON user_map.USER_ID = user.id
+										LEFT JOIN user_map ON user_map.USER_ID = user.id
 										WHERE user.username like '%".$srcRez."%'
 										GROUP BY user.id
 										ORDER BY 2 DESC";
 							}
 							else{
 								$sql = "SELECT user.username,sum(user_map.score) FROM user
-										JOIN user_map ON user_map.USER_ID = user.id
+										LEFT JOIN user_map ON user_map.USER_ID = user.id
 										GROUP BY user.id
 										ORDER BY 2 DESC";
 							}
 							$result = mysqli_query($conn,$sql);
-							#$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 							if (!$result) {
 								printf("Error: %s\n", mysqli_error($conn));
 								exit();
@@ -72,7 +66,12 @@
 							while($row = mysqli_fetch_array($result,MYSQLI_BOTH)){
 								if($row[0]!=null){
 									$rownum++;
-									echo "<tr><td>".$rownum."</td><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
+									if($row[1]!=null){
+										echo "<tr><td>".$rownum."</td><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
+									}
+									else{
+										echo "<tr><td>".$rownum."</td><td>".$row[0]."</td><td>0</td></tr>";
+									}
 								}
 							}
 							if($rownum==0){
