@@ -1,5 +1,5 @@
 # WebPuzzle
-CLIW 3 Peopl!
+CLIW 3 People!
 
 
 -> git status
