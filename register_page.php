@@ -7,7 +7,7 @@ if(isset($_POST['register_btn'])) {
         $username = mysqli_real_escape_string($conn,$_POST['username']);
         $password = mysqli_real_escape_string($conn,$_POST['password']);
 
-        $sql = "INSERT INTO user(id,username, password) VALUES(3,'$username','$password')";
+        $sql = "INSERT INTO user(username, password) VALUES('$username','$password')";
         mysqli_query($conn, $sql);
        
         $_SESSION['login_user'] = $username;
