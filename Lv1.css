@@ -22,8 +22,17 @@ table{
 .blank{ 
     background-color:black; 
 }
+.unlock{ 
+    background-color:gray; 
+}
+.pl2{ 
+    background-color:lime; 
+}
 .pink{
 	background-color:pink; 
+}
+.key{
+	background-color:yellow; 
 }
 .current{ 
     background-color:white; 
@@ -34,3 +43,7 @@ table{
 .finish{ 
     background-color:red; 
 } 
+.gate1{
+    background-color:LightSlateGrey; 
+} 
+ 

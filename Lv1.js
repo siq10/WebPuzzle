@@ -64,7 +64,7 @@ function createMap(){
 				}
 				else /// here
 				if( x==8 && y==26 ){
-					document.write("<td class='blank' id='"+ x + "-" + y +"'></td>");
+					document.write("<td class='wall' id='"+ x + "-" + y +"'></td>");
 				}
 				else /// here
 				if(x==16 && (y>=1 && y<=3)){
@@ -90,6 +90,7 @@ function createMap(){
 					document.write("<td class='blank' id='"+ x + "-" + y +"'></td>"); 
 				}
             }
+			
 			
         } 
         document.write("</tr>"); 
@@ -253,6 +254,8 @@ function update(){
 	
 	if((currentX>=9 && currentX<=11) && (currentY==10 || currentY==11 || currentY==13 || currentY==14)){
 		set(10,12,"wall");
+		set(6,12,"blank");
+		set(8,26,"blank");
 	}
 	
 	if((currentX>=21 && currentX<=23) && (currentY==18 || currentY==19) ){
@@ -261,6 +264,10 @@ function update(){
 		set(24,15,"blank");
 		set(24,1,"wall");
 		set(24,3,"wall");
+		
+		set(25,17,"wall");
+		set(26,17,"wall");
+		set(27,17,"wall");
 	}
 	
 	if((currentX>=5 && currentX<=7) && (currentY==10 || currentY==11 || currentY==13 || currentY==14)){
@@ -269,6 +276,10 @@ function update(){
 	
 	if((currentX>=45 && currentX<=49) && (currentY==1 || currentY==2 || currentY==3)){
 		set(47,2,"wall");
+		
+		set(25,17,"blank");
+		set(26,17,"blank");
+		set(27,17,"blank");
 	}
 	
 	if((currentX>=11 && currentX<=17) && (currentY==5)){
