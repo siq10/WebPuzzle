@@ -11,7 +11,14 @@
 	display: flex;
     align-items: center;
     justify-content: center;
-	text-align: center;
+    text-align: center;
+
+}
+
+canvas{
+    background-color: #3b4249;
+    margin-left: 30vw;
+ 
 }
 
 .image img{

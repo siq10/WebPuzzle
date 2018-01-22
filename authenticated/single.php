@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+
+if (!$_SESSION['login_user'])  
+{  
+    header('location: ../login_page.php');  
+    exit;  
+}
+?>
+
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../style/card.css">
@@ -50,7 +61,7 @@
                 <div class="card">
             <h1>_m1rr0r1ng.agr</h1>
             <img src="../resources/labyrinth.png" width=30%> 
-            <div><a href="actual_game.html">Start</a></div>
+            <div><a href="best_level.php">Start</a></div>
             <div class="flex">
                 <div class="f1">
                     <h2>Type: Cooperative</h2>

@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+
+if (!$_SESSION['login_user'])  
+{  
+    header('location: ../login_page.php');  
+    exit;  
+}
+?>
+
 <!DOCTYPE HTML>
 <html>
     <head>

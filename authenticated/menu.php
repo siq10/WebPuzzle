@@ -28,11 +28,11 @@ include ("../session.php");
 			<img src="../resources/Juan_monster.png"  height="532" width="252" alt="juan">
 		</div>
 			<div class="container">
-			<div class="space"><a class="btn" href="gamemode.html">Start Game</a></div>
-			<div class="space"><a class="btn" href="profile.html">My Profile</a></div>
+			<div class="space"><a class="btn" href="gamemode.php">Start Game</a></div>
+			<div class="space"><a class="btn" href="profile.php">My Profile</a></div>
 			<div class="space"><a class="btn" href="../howto_page.html">How To</a></div>
 			<div class="space"><a class="btn" href="../score_page.html">Top</a></div>
-			<div class="space"><a class="btn" href="../main_page.html">Logout</a></div>
+			<div class="space"><a class="btn" href="../main_page.php">Logout</a></div>
 
 		</div>
 		<div class="roby">
