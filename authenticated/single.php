@@ -21,7 +21,7 @@ if (!$_SESSION['login_user'])
         <div class="card">
             <h1>_hellofriend.agr</h1>
             <img src="../resources/labyrinth.png" width=30%> 
-            <div><a href="../Lv1.html">Start</a></div>
+            <div><a href="Lv1.php">Start</a></div>
             <div class="flex">
                 <div class="f1">
                     <h2>Type: Single Player</h2>
@@ -41,7 +41,7 @@ if (!$_SESSION['login_user'])
                 <div class="card">
             <h1>_ones-and-zer0es.agr</h1>
             <img src="../resources/labyrinth.png" width=30%> 
-            <div><a href="../Lv2.html">Start</a></div>
+            <div><a href="Lv2.php">Start</a></div>
             <div class="flex">
                 <div class="f1">
                     <h2>Type: Single Player</h2>
