@@ -7,7 +7,6 @@ if (!$_SESSION['login_user'])
     exit;  
 }
 ?>
-<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Monster Party</title>
@@ -17,28 +16,24 @@ if (!$_SESSION['login_user'])
 		
 	</head>
 		
-
+    
 	<body class="bg">
 		<div id="topMargin">
 			<span>&nbsp;</span>
 			<div class="image">
-				<img src="../resources/Labyrinth.jpg" alt="labirint">
-			</div>
+                <canvas id="game" width="800" height="800"></canvas>    
+            </div>
+            <h1 style="text-align: center" id="hp"></h1>
+            <h2 style= "text-align:center" id="seconds"></h2>
 			<div class="help">
 				<h1> W | ↑: for going Up &nbsp; A | ←: for going Left </h1>
 				<h1> S | ↓: for going Down &nbsp; D | →: for going Right </h1>
-				<h1> Power | Ins: for using Power</h1>
-				<h2> The indications after "|" sign are for (local) multiplayer mode! </h2>
-				
 				<!--<div class="space"><a class="btnscreen" href="#">Full Screen</a></div>-->
-				<input class= "help" type="submit" value="Full Screen">
+<!--				<input class= "help" type="submit" value="Full Screen">-->
 			</div>
+			<div id="status"></div>
 		</div>
-		
-
-		
-
+		<script src="../JS/game.js"  type="text/javascript"></script>
 	</body>
 
 </html>
-
