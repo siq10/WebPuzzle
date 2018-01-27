@@ -18,7 +18,6 @@ if (!$_SESSION['login_user'])
 		
 		<script src="../JS/best_level.js"></script>
 		
-		
 	</head>
 		
 

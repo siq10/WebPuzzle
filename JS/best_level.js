@@ -252,11 +252,20 @@ function updateGameArea() {
     scorePlayer2.update();
 
     if (point1 > 40 || point2 > 40) {
+		var finalSScore=0;
+		if(point1>point2)
+			finalSScore=point1-point2-10;
+		else
+			finalSScore=point2-point1-10;
+		finalSScore=finalSScore*15;
+		ajax_post(finalSScore);
         myGameArea.stop();
         clearInterval(this.interval);
-        this.ajax_post(point1);
+        setTimeout(function() {
+		  window.location.href ='http://localhost:88/authenticated/menu.php'
+		}
+		,3000)
         
-
     }
 }
 

@@ -19,7 +19,9 @@ include ("../session.php");
 	</head>
 
 	<body class="bg">
-		<div class="logo"><img src="../resources/logo_monster.png" alt="logo">
+		<a href="menu.php">
+			<div class="logo"><img src="../resources/logo_monster.png" alt="logo">
+		</a>
 	    <h1 class="welcome">Welcome <?php echo $login_session; ?></h1> 
 	    </div>
 		<div class="floater">
@@ -31,7 +33,7 @@ include ("../session.php");
 			<div class="space"><a class="btn" href="gamemode.php">Start Game</a></div>
 			<div class="space"><a class="btn" href="profile.php">My Profile</a></div>
 			<div class="space"><a class="btn" href="../howto_page.html">How To</a></div>
-			<div class="space"><a class="btn" href="../score_page.html">Top</a></div>
+			<div class="space"><a class="btn" href="../score_page_logged.php">Top</a></div>
 			<div class="space"><a class="btn" href="../main_page.php">Logout</a></div>
 
 		</div>

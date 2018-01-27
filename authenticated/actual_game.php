@@ -20,8 +20,9 @@ if (!$_SESSION['login_user'])
 	<body class="bg">
 		<div id="topMargin">
 			<span>&nbsp;</span>
+			
 			<div class="image">
-                <canvas id="game" width="800" height="800"></canvas>    
+				<canvas id="game" width="800" height="800"></canvas>
             </div>
             <h1 style="text-align: center" id="hp"></h1>
             <h2 style= "text-align:center" id="seconds"></h2>
@@ -33,7 +34,9 @@ if (!$_SESSION['login_user'])
 			</div>
 			<div id="status"></div>
 		</div>
+		
 		<script src="../JS/game.js"  type="text/javascript"></script>
+		
 	</body>
 
 </html>

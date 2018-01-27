@@ -1,5 +1,11 @@
 <?php
-	include ("../session.php");
+session_start();
+
+if (!$_SESSION['login_user'])  
+{  
+    header('location: ../login_page.php');  
+    exit;  
+}
 ?>
 <html> 
 <head> 
@@ -8,18 +14,35 @@
     <title>Lv2</title> 
     <link rel="stylesheet" type="text/css" href="../style/Lv1.css">
 </head> 
-<body style="background-color:magenta;"> 
-	<center>
+<body > 
+	<div class="logo"><img src="../resources/logo_monster.png"></div>
+	
 	<input id="usrname" value="<?php echo $login_session;?>" type="hidden"> 
-		<br>
-		<br>
-		<script  src="../JS/Lv2.js"  type="text/javascript"></script> 
-		<p> User WASD for 1st Player</p>
-		<p> User IJKL for 1st Player</p>
-		<p id="score" style="color:white"></p>
-		<p id="position1" style="color:white"></p>
-		<p id="position2" style="color:white"></p>
+	
+	<div class="center">
+		<script  src="../JS/Lv2.js"  type="text/javascript"></script>
+	</div>
+	<br>
+	<div class="center">
+		<p> Player1 : W-Up | A-Left | S-Down | D-Right </p>
+	</div>
 		
-	</center>
+	<div class="center">
+		<p> Player2 : I-Up | J-Left | K-Down | L-Right </p>
+	</div>
+	<div class="center">
+		<p id="score"></p>
+	</div>
+	<!--<div class="center">
+		<p id="position1"></p>
+	</div>
+	<div class="center">
+		<p id="position2"></p>
+	</div>-->
+	<div class="center">
+		<div id="status"></div>
+	</div>
+
+	
 </body> 
 </html>

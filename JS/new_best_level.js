@@ -22,6 +22,31 @@ Array.prototype.memory_tile_shuffle = function(){
         this[i] = temp;
     }
 }
+function ajax_post(bestScore){
+    console.log(bestScore);
+    // Create our XMLHttpRequest object
+    var hr = new XMLHttpRequest();
+	
+    // Create some variables we need to send to our PHP file
+    var url = "writeToDataBase.php";
+
+    var vars = "score="+bestScore+"&map="+4;
+    hr.open("POST", url, true);
+    // Set content type header information for sending url encoded variables in the request
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // Access the onreadystatechange event for the XMLHttpRequest object
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var return_data = hr.responseText;
+			document.getElementById("status").innerHTML = return_data;
+	    }
+    }
+    // Send the data to PHP now... and wait for response to update the status div
+    hr.send(vars); // Actually execute the request
+    document.getElementById("status").innerHTML = "processing...";
+
+}
+
 function newBoard(){
 	tiles_flipped = 0;
 	var output = '';
@@ -108,9 +133,14 @@ function memoryFlipTile(tile,val){
 					//alert("Board cleared... generating new board");
 
 					//AICI E SCORUL FINAL :attempts
-					attempts = (100-attempts)*5
+					attempts = (100-attempts)*5;
+					ajax_post(attempts);
 					document.getElementById('memory_board').innerHTML = "";
 					newBoard();
+					 setTimeout(function() {
+						  window.location.href ='http://localhost:88/authenticated/menu.php'
+						}
+						,3000)
 				}
 			} else {
 				function flip2Back(){

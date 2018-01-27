@@ -18,7 +18,7 @@ var score = 573;
 var tempdir = direction; 
 var starTime;
  
-var usrname = document.getElementById("usrname").value;
+//var usrname = document.getElementById("usrname").value;
 
 function ajax_post(bestScore){
     console.log(bestScore);
@@ -399,7 +399,7 @@ function update(){
     //set 
     document.getElementById("score").innerHTML = "Score: " + score; 
 	
-	document.getElementById("position").innerHTML = "Position: X = " + currentX + " | Y = " + currentY; 
+	//document.getElementById("position").innerHTML = "Position: X = " + currentX + " | Y = " + currentY; 
 	
 } 
  
@@ -414,7 +414,10 @@ function updatePlayer(){
 
 function leave() {
 	ajax_post(score);
-	
+	setTimeout(function() {
+		  window.location.href ='http://localhost:88/authenticated/menu.php'
+		}
+		,3000)
 }
 
 run();

@@ -504,9 +504,9 @@ function update(){
     //set 
     document.getElementById("score").innerHTML = "Score: " + score; 
 	
-	document.getElementById("position1").innerHTML = "Position: X1 = " + currentX1 + " | Y1 = " + currentY1;
+	//document.getElementById("position1").innerHTML = "Position: X1 = " + currentX1 + " | Y1 = " + currentY1;
 	
-	document.getElementById("position2").innerHTML = "Position: X2 = " + currentX2 + " | Y2 = " + currentY2; 
+	//document.getElementById("position2").innerHTML = "Position: X2 = " + currentX2 + " | Y2 = " + currentY2; 
 	
 	if(gameOver==true){
 		
@@ -533,6 +533,10 @@ function updatePlayer2(){
 
 function Leave(){
 	ajax_post(score);
+	setTimeout(function() {
+		  window.location.href ='http://localhost:88/authenticated/menu.php'
+		}
+		,3000)
 }
  
 run();
