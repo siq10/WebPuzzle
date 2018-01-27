@@ -24,7 +24,7 @@ if (!$_SESSION['login_user'])
         <div class="card">
             <h1>_hellofriend.agr</h1>
             <img src="../resources/labyrinth.png" width="30%" alt="logo"> 
-            <div><a href="actual_game.html">Start</a></div>
+            <div><a href="best_level.php">Start</a></div>
             <div class="flex">
                 <div class="f1">
                     <h2>Type: Cooperative</h2>

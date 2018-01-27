@@ -61,7 +61,7 @@ if (!$_SESSION['login_user'])
                 <div class="card">
             <h1>_m1rr0r1ng.agr</h1>
             <img src="../resources/labyrinth.png" width=30%> 
-            <div><a href="best_level.php">Start</a></div>
+            <div><a href="newBestLevel.php">Start</a></div>
             <div class="flex">
                 <div class="f1">
                     <h2>Type: Cooperative</h2>

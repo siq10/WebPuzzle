@@ -16,7 +16,7 @@ if (!$_SESSION['login_user'])
 		<link rel="stylesheet" type="text/css" href="../style/actual_game.css">
 		<link rel="stylesheet" type="text/css" href="../style/button.css">
 		
-			<script src="../JS/best_level.js"></script>
+		<script src="../JS/best_level.js"></script>
 		
 		
 	</head>
