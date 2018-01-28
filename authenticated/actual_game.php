@@ -11,7 +11,7 @@ if (!$_SESSION['login_user'])
 	<head>
 		<title>Monster Party</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../style/actual_game.css">
+		<link rel="stylesheet" type="text/css" href="../style/game.css">
 		<link rel="stylesheet" type="text/css" href="../style/button.css">
 		
 	</head>
@@ -22,10 +22,10 @@ if (!$_SESSION['login_user'])
 			<span>&nbsp;</span>
 			
 			<div class="image">
-				<canvas id="game" width="800" height="800"></canvas>
+				<canvas style="text-align: center" id="game" width="800" height="600"></canvas>
             </div>
-            <h1 style="text-align: center" id="hp"></h1>
-            <h2 style= "text-align:center" id="seconds"></h2>
+            <h1 style="text-align: center" id="hp">HP</h1>
+            <h2 style= "text-align:center" id="seconds">Timer</h2>
 			<div class="help">
 				<h1> W | ↑: for going Up &nbsp; A | ←: for going Left </h1>
 				<h1> S | ↓: for going Down &nbsp; D | →: for going Right </h1>

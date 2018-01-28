@@ -164,16 +164,16 @@ window.onload = function () {
     Context.create("game")
 
     //    Context.context.beginPath()
-    var tile5 = "../resources/Assets/png/Tiles/Tile.png"
+//    var tile5 = "../resources/Assets/png/Tiles/Tile.png"
     //    var tile5 = "http://www.tigrisgames.com/wall.png"
-    var crate = "../resources/Assets/png/Objects/Crate.png"
+//    var crate = "../resources/Assets/png/Objects/Crate.png"
     //    var crate = "http://www.tigrisgames.com/crate.png"
 
-    var img = new Sprite(tile5, false)
-
-    var img2 = new Sprite(crate, false)
-
-    var pattern = new Sprite(crate, true)
+//    var img = new Sprite(tile5, false)
+//
+//    var img2 = new Sprite(crate, false)
+//
+//    var pattern = new Sprite(crate, true)
 
     var angle = 0
 
@@ -221,6 +221,7 @@ window.onload = function () {
         }
         this.update = obstacles => {
             if (this.life> 0)
+            {
             this.draw()
             for(var i = 0;i< obstacles.length;i++)
                 {
@@ -274,7 +275,8 @@ window.onload = function () {
             }
             this.x += this.velocity.x
             this.y += this.velocity.y
-                
+            }
+            
         }   
     
         this.draw = () => {
@@ -375,18 +377,22 @@ window.onload = function () {
     
         function onkeydopp(e) {
         if (e.keyCode == 39) {
+            e.preventDefault()
             op.right = 1
         } //right arrow
         else    
         if (e.keyCode == 37) {
+            e.preventDefault()
             op.left = 1
         } //left arrow
         else
         if (e.keyCode == 38) {
-            op.up = 1
+              e.preventDefault()
+          op.up = 1
         } //up arrow
         else 
         if (e.keyCode == 40) {
+            e.preventDefault()
             op.down = 1;
 
         } //down arrow
@@ -397,19 +403,23 @@ window.onload = function () {
     function onkeyupp(e)
     {
         if (e.keyCode == 39) {
-            op.right = 0
+             e.preventDefault()
+           op.right = 0
         } //right arrow
         else         
         if (e.keyCode == 37) {
-            op.left = 0
+                e.preventDefault()
+        op.left = 0
         } //left arrow
         else
         if (e.keyCode == 38) {
-            op.up = 0
+                  e.preventDefault()
+      op.up = 0
         } //up arrow
         else 
         if (e.keyCode == 40) {
-            op.down = 0;
+               e.preventDefault()
+         op.down = 0;
         }
     }
     
@@ -495,8 +505,11 @@ window.onload = function () {
                 }
             this.x += this.velocity.x
             this.y += this.velocity.y
-            if(constant<=15)
-            constant+=0.0001
+            if(this.velocity.x<1.5 && this.velocity.x>-1.5)
+            this.velocity.x*=1.0001
+            if(this.velocity.y<1.5 && this.velocity.y>-1.5)
+            this.velocity.y*=1.0001
+            
         } 
     
         this.draw = () => {
@@ -507,31 +520,7 @@ window.onload = function () {
             Context.context.closePath()
         }
     }
-//        this.vx = Math.random() * 10 - 5
-//        this.vy = Math.random() * 10 - 5
-//        this.gravity = 0.1
-//        obsindex++
-//        obstacles[obsindex] = this
-//        this.id = obsindex
-//        this.life = 0
-//        this.maxLife = Math.random() * 200 + 10
 
-//    Obstacle.prototype.draw = function () {
-//        this.x += this.vx
-//        this.y += this.vy
-//        if (Math.random() < 0.2) {
-//            this.vx = Math.random() * 10 - 5
-//            this.vy = Math.random() * 10 - 5
-//        }
-//        //this.vy += this.gravity
-//        this.life++
-//            if (this.life >= this.maxLife) {
-//                delete obstacles[this.id]
-//            }
-//        Context.context.fillStyle = 'white'
-//        Context.context.fillRect(this.x, this.y, 10, 10)
-//
-//    }
     var p = new Player(15)
     var op = new Opponent(15)
     
@@ -543,6 +532,7 @@ window.onload = function () {
     let obstacles
     function init() {
         obstacles = []
+        ok=0
         for (let i = 0;i<60;i++)
             {   
                 const radius = 15
@@ -551,6 +541,9 @@ window.onload = function () {
                 var y = randomIntFromRange(radius,Context.canvas.height-radius)
                 if(i!==0)
                 {
+                while(ok==0)
+                {
+                ok=1
                 for (let j=0; j < obstacles.length;j++)
                     {
                         if(distance(x,y,obstacles[j].x,obstacles[j].y) - 2*radius < 0 ||
@@ -560,9 +553,11 @@ window.onload = function () {
                                 
                                 x = randomIntFromRange(radius,Context.canvas.width - radius)
                                 y = randomIntFromRange(radius,Context.canvas.height- radius)
-                                j = -1
+                                ok=0
+                                break
                             }
                     }
+                }
                 }
                 obstacles.push(new Obstacle(x,y,radius))
             }
@@ -589,7 +584,7 @@ window.onload = function () {
             if(p.life>=0)
                 hp.innerHTML = "HP: " + p.life
             
-            if(p.life==0)
+            if(p.life<=0)
                 {
                     if(ok==1)
                         {
@@ -598,7 +593,7 @@ window.onload = function () {
 					var scor = seccount*20;
 					ajax_post(scor);
                     setTimeout(function() {
-                      window.location.href ='http://localhost:88/authenticated/menu.php'
+                      window.location.href ='http://localhost/authenticated/menu.php'
                     }
                     ,3000)
                         }
@@ -610,140 +605,4 @@ window.onload = function () {
 
 init()
 animate()
-
-    
-    
-    
-//    function Player() {
-//        this.x = Context.canvas.width / 4
-//        this.y = Context.canvas.height / 4
-//        this.vx = 0
-//        this.vy = 0
-//        this.gravity = 0
-//        this.life = 0
-//        this.maxLife = 1
-//        this.moving = 0
-//        this.left=0
-//        this.right=0
-//        this.up = 0
-//        this.down = 0
-
-
 }
-    
-    
-//
-//    Player.prototype.draw = function () {
-//        if(p.left==1)
-//            {
-//                p.vx=-4
-//            }
-//        if(p.right==1)
-//            {
-//                p.vx=4
-//            }
-//        if(p.down==1)
-//            {
-//                p.vy=4
-//            }
-//        if(p.up==1){
-//            p.vy=-4
-//        }
-        
-//        if(this.x+this.vx>0 && this.x+this.vx<Context.canvas.width)
-//        this.x += this.vx
-////        if(this.y+this.vy>0 && this.y + this.vy<Context.canvas.height)
-//        this.y += this.vy
-//        if (this.life >= this.maxLife) {
-//            delete this
-//        }
-//        if(this.x>Context.canvas.width-20)
-//            this.x = Context.canvas.width-20
-//        else if(this.x < 10 )
-//            this.x = 10
-//        if(this.y>Context.canvas.height-10)
-//            this.y = Context.canvas.height-10
-//        else if(this.y < 10 )
-//            this.y = 10
-//        Context.context.fillStyle = 'red'
-//        Context.context.fillRect(this.x, this.y, 10, 10)
-//
-//    }
-//     var p =  new Player()
-    
-//    window.addEventListener("keydown", onkeydown);
- //    window.addEventListener("keyup", onkeyup);
-
-//        p.moving = 0
-//    }
-
-    //    var back = new Image()    
-    //    back.src = '../resources/Assets/png/BG.png'
-    //    back.onload = function(){
-    //        Context.context.drawImage(back,0,0);   
-    //    }
-
-
-//    setInterval(function () {
-//        Context.context.fillStyle = "black"
-//        Context.context.fillRect(0, 0, 800, 800)
-//
-//        for (var i = 0; i < obsnum; i++) {
-//            new Obstacle()
-//        }
-//        for (var i in obstacles) {
-//
-//            obstacles[i].draw()
-//        }
-//        p.draw()
-//        if(p.moving==0)
-//        {
-//        if(p.vx>0 && p.right==0)
-//            p.vx -= 0.5
-//        else
-//            if(p.vx<0 && p.left==0)
-//                p.vx+=0.5
-//        if(p.vy<0&& p.up==0)
-//            p.vy+=0.5
-//        else
-//            if(p.vy>0&&p.down==0)
-//                p.vy-=0.5
-//        }
-        
-        //        if (incX < 500 && incX > -100) {
-        //            if (Math.random() >= 0.3)
-        //            {incX += 2
-        //             angle+=2.0}
-        //            else
-        //            {incX -= 2
-        //                angle-=2.0}
-        //        }
-        //        if (incY < 200 && incY > -400) {
-        //            if (Math.random() >= 0.5)
-        //                incY += 2
-        //            else
-        //                incY -= 2
-        //        }
-        //        
-        //        if (incx < 500 && incx > -100) {
-        //            if (Math.random() >= 0.35)
-        //            {incx += 2
-        //             angle1+=2.0}
-        //            else
-        //            {incx -= 2
-        //                angle1-=2.0}
-        //        }
-        //        if (incy < 200 && incy > -400) {
-        //            if (Math.random() >= 0.5)
-        //                incy += 2
-        //            else
-        //                incy -= 2
-        //        }
-        //        img.draw(600, 50, 64, 64)
-        //        img.draw(0, 74, 256, 32)
-        //        pattern.draw(160, 160, 256, 32)
-        //        img.rotate(posX + incX, posY + incY, angle)
-        //        img2.rotate(posx + incx, posy + incy, angle1)
-//
-//    }, 30)
-//}

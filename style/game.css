@@ -1,0 +1,75 @@
+@font-face {
+    font-family: MonsterFont;
+    src: url("../resources/HVD_Rowdy.ttf");
+}
+
+.bg {
+    background-color: #212120;
+}
+
+.image{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+}
+
+.image canvas{
+	width: 800px;
+    height: 600px;
+    max-width: 800px;
+    border:1px solid red;
+}
+
+#game{
+/*
+    background:url(../resources/Assets/png/BG.png);
+    background-size: 800px 800px;
+*/
+}
+#hp{
+   color:teal; 
+}
+#seconds{
+    color:teal;
+}
+
+
+
+
+
+
+.help{
+	width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+	font-family: MonsterFont;
+    color: White;
+    text-decoration: none;
+    
+}
+h2 {
+	font-family: MonsterFont;
+	color: SlateGray;
+}
+
+
+input[type=submit] {
+	font-family: MonsterFont;
+	background-color: DarkSlateGray;
+    border: none;
+        font-family:MonsterFont;
+    color: White;
+    padding: 14px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	width:30%;
+}

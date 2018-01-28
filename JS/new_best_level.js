@@ -138,7 +138,7 @@ function memoryFlipTile(tile,val){
 					document.getElementById('memory_board').innerHTML = "";
 					newBoard();
 					 setTimeout(function() {
-						  window.location.href ='http://localhost:88/authenticated/menu.php'
+						  window.location.href ='http://localhost/WebPuzzle/authenticated/menu.php'
 						}
 						,3000)
 				}

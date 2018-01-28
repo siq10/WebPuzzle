@@ -262,7 +262,7 @@ function updateGameArea() {
         myGameArea.stop();
         clearInterval(this.interval);
         setTimeout(function() {
-		  window.location.href ='http://localhost:88/authenticated/menu.php'
+		  window.location.href ='http://localhost/WebPuzzle/authenticated/menu.php'
 		}
 		,3000)
         

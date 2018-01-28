@@ -415,7 +415,7 @@ function updatePlayer(){
 function leave() {
 	ajax_post(score);
 	setTimeout(function() {
-		  window.location.href ='http://localhost:88/authenticated/menu.php'
+		  window.location.href ='http://localhost/WebPuzzle/authenticated/menu.php'
 		}
 		,3000)
 }
