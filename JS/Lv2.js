@@ -25,11 +25,11 @@ var lastY2 = [currentY2];
 var running = false; 
 var gameOver = false; 
 var direction = -2; // up = 0, down = -1, left = 1, right = 2 
-var int; 
+
 var score = 681; 
 //temporary direction (this fixes users pressing keys too quickly and turning into themselves) 
 var tempdir = direction; 
-var starTime;
+
 
 function ajax_post(bestScore){
     console.log(bestScore);
@@ -54,10 +54,9 @@ function ajax_post(bestScore){
     hr.send(vars); // Actually execute the request
     document.getElementById("status").innerHTML = "processing...";
 
-} 
+}
 
 function run(){ 
-	starTime = performance.now();
     init(); 
     int = setInterval(gameLoop, interval); 
 } 
@@ -114,13 +113,8 @@ function createMap(){
 function testCanMoveHere(x,y){
 	if(x == 0 || x == width-1 || y == 0 || y == height-1) 
         return false;
-	
-	/*if(x==11 && y==4 && (tempdir>=3 && tempdir<=6))
-		return true;*/
-	
-	
+
 	if(initialstage==1){
-		
 		
 		if(x==30 && y==2 && tempdir>=-1 && tempdir<=2)
 			if(gotkey1==0)
@@ -155,7 +149,6 @@ function testCanMoveHere(x,y){
 		
 		if(x==45 && (y>=12 && y<=27))
 			return false;
-		
 		
 	}
 	
@@ -262,19 +255,19 @@ window.addEventListener("keypress", function key(event){
 	else
 		if(key == 100 || key == 68)
 			tempdir = 2; 
-	/// I  -> Up  --- pl2
+	/// I/i  -> Up  --- pl2
 	else 
 		if(key == 73 || key == 73+32)
 			tempdir = 3; 
-	/// J  -> Down  --- pl2
+	/// J/j  -> Down  --- pl2
 	else
 		if(key == 75 || key == 75+32)
 			tempdir = 4; 
-	/// K  -> Left  --- pl2
+	/// K/k  -> Left  --- pl2
 	else
 		if(key == 74 || key == 74+32)
 			tempdir = 5; 
-	/// L  -> Right  --- pl2
+	/// L/l  -> Right  --- pl2
 	else
 		if(key == 76 || key == 76+32)
 			tempdir = 6; 
@@ -331,6 +324,16 @@ function update(){
 		
 		set(47,26,"finish");
 		
+	}
+	
+	if(currentX2==2 && currentY2==14){
+		set(1,14,"blank");
+	}
+	if(currentX2==1 && currentY2==13){
+		set(1,14,"blank");
+	}
+	if(currentX2==1 && currentY2==15){
+		set(1,14,"blank");
 	}
 	
 	if((currentX1==12 && currentY1==2) ||(currentX2==12 && currentY2==2)){

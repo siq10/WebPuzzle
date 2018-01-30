@@ -1,22 +1,24 @@
 //settings 
+// Player's possition
 var currentX = 2;//18;//10;//2; 
 var currentY = 2;//26;//26;//2; 
+
+// Table Dimension
 var height = 29; 
 var width = 50; 
+// at 0.1s, there must be an update
 var interval = 100; 
  
 //game variables 
-var length = 0; 
-var lastX = [currentX]; 
-var lastY = [currentY]; 
 var running = false; 
 var gameOver = false; 
-var direction = -2; // up = 0, down = -1, left = 1, right = 2 
-var int; 
+
+
 var score = 573; 
+var direction=-2;
 //temporary direction (this fixes users pressing keys too quickly and turning into themselves) 
 var tempdir = direction; 
-var starTime;
+
  
 //var usrname = document.getElementById("usrname").value;
 
@@ -46,7 +48,6 @@ function ajax_post(bestScore){
 }
 
 function run(){ 
-	starTime = performance.now();
     init(); 
     int = setInterval(gameLoop, interval); 
 } 
@@ -232,9 +233,9 @@ function getType(x,y){
 function checkFinish(){ 
     var found = false; 
     while(!found){
-      
 	    var finishX =  47;
 	    var finishY =  26;
+		
         if(getType(finishX, finishY) == "blank") 
             found = true; 
     } 
@@ -248,7 +249,7 @@ window.addEventListener("keypress", function key(event){
 	/// W/w -> Up
 	if(key == 119 || key == 87)
 		tempdir = 0; 
-    /// if S/s -> Down
+    /// S/s -> Down
     else
 	if(key == 115 || key == 83)
 		tempdir = -1; 
@@ -348,41 +349,47 @@ function update(){
 	}
 	
     direction = tempdir; 
-    updatePlayer(); 
-    //sets the previous square as blank
-    set(lastX[length], lastY[length], "blank"); 
 	
     //updates the current position
     if(direction == 0) {
 		//Up
 		currentYcopy = currentY;
 		currentYcopy-=1;
-		if(testCanMoveHere(currentX,currentYcopy)==true)
+		if(testCanMoveHere(currentX,currentYcopy)==true){
+			set(currentX,currentY,"blank");
 			currentY--; 
+		}
+		
 		running = false; 
 	}
     else if(direction == -1) {
 		//Down
 		currentYcopy = currentY;
 		currentYcopy+=1;
-		if(testCanMoveHere(currentX,currentYcopy)==true)
+		if(testCanMoveHere(currentX,currentYcopy)==true){
+			set(currentX,currentY,"blank");
 			currentY++; 
+		}
 		running = false; 
 	}
     else if(direction == 1) {
 		//Left
 		currentXcopy = currentX;
 		currentXcopy-=1;
-		if(testCanMoveHere(currentXcopy,currentY)==true)
+		if(testCanMoveHere(currentXcopy,currentY)==true){
+			set(currentX,currentY,"blank");
 			currentX--; 
+		}
 		running = false; 
 	}
     else if(direction == 2) {
 		//Right
 		currentXcopy = currentX;
 		currentXcopy+=1;
-		if(testCanMoveHere(currentXcopy,currentY)==true)
+		if(testCanMoveHere(currentXcopy,currentY)==true){
+			set(currentX,currentY,"blank");
 			currentX++; 
+		}
 		running = false; 
 	}
     //update the current block
@@ -402,15 +409,7 @@ function update(){
 	//document.getElementById("position").innerHTML = "Position: X = " + currentX + " | Y = " + currentY; 
 	
 } 
- 
-function updatePlayer(){ 
-    for(var i = length; i > 0; i--){ 
-        lastX[i] = lastX[i-1]; 
-        lastY[i] = lastY[i-1]; 
-    } 
-    lastX[0] = currentX; 
-    lastY[0] = currentY; 
-} 
+
 
 function leave() {
 	ajax_post(score);
